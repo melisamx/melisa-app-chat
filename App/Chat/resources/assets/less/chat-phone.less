@@ -1,0 +1,104 @@
+.app-chat-chat-view
+{
+    @import "universal/avatars";
+    
+    .contacts-list,
+    .chats-list
+    {
+        
+        .x-listitem
+        {
+            min-height: 68px !important;
+        }
+        
+        .fa {
+            position: absolute;
+            left: 10px;
+            font-size: 42px;
+            top: 13px;
+        }
+        
+        .name,
+        .actual-state {
+            margin-left: 53px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            /* necesary width in px no % */
+            @media (min-width: 360px) {
+                width: 209px;
+            }
+            @media (min-width: 412px) {
+                width: 271px;
+            }
+        }
+        
+        .name {
+            font-weight: bold;
+        }
+        
+        .actual-state
+        {
+            color: #bdbdbd;
+            font-family: Roboto;
+        }
+        
+    }
+    
+    .chats-list
+    {
+        
+        .last-connection
+        {
+            position: absolute;
+            top: 13px;
+            color: #bdbdbd;
+            right: 10px;
+        }
+        
+    }
+    
+    .chat
+    {
+        
+        .button-contact
+        {
+            
+            .x-innerhtml
+            {
+                line-height: 16px;
+            }
+            
+            .name,
+            .lastConnection
+            {
+                font-size: 11px;
+                text-transform: none;
+            }
+            
+            .name
+            {
+                font-weight: bold;
+                font-size: 13px;
+            }
+        }
+        
+        .button-close
+        {
+            
+            &.x-button
+            {
+                padding: 0;
+            }
+            
+            .avatar {
+                font-size: 35px;
+                margin-left: 10px;
+            }
+        }
+        
+    }
+    
+    @import "chat-messages";    
+    
+}

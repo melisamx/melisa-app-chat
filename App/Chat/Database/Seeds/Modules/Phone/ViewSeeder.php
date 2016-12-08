@@ -2,10 +2,11 @@
 
 use Illuminate\Database\Seeder;
 use Melisa\Laravel\Database\InstallModule;
+use Melisa\Laravel\Database\InstallAsset;
 
 class ViewSeeder extends Seeder
 {
-    use InstallModule;
+    use InstallModule, InstallAsset;
     
     public function run()
     {
@@ -32,6 +33,11 @@ class ViewSeeder extends Seeder
                     'description'=>'Acceso al módulo para ver chat versión phone'
                 ],
             ],
+        ]);
+        
+        $this->installAssetCss('asset.chat.phone.chat.view', [
+            'name'=>'CSS view chat version phone',
+            'path'=>'/chat/css/chat-phone.css',
         ]);
         
     }

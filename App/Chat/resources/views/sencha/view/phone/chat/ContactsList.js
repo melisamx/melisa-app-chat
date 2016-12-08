@@ -7,6 +7,11 @@ Ext.define('Melisa.chat.view.phone.chat.ContactsList', {
     deferEmptyText: true,
     striped: true,
     itemTpl: [
-        '{name}'
-    ]
+        '<i class="x-fa fa fa-user-circle-o {avatar}" aria-hidden="true"></i>',
+        '<p class="name">{name}</p>',
+        '<p class="actual-state">{actualState}</p>'
+    ],
+    bind: {
+        store: '{contacts}'
+    }
 });

@@ -4,28 +4,57 @@ Ext.define('Melisa.chat.view.phone.chat.ViewWrapper', {
     requires: [
         'Melisa.core.Module',
         
-        'Melisa.chat.view.phone.chat.UsersList',
-        'Melisa.chat.view.phone.chat.ContactsList'
+        'Melisa.chat.view.phone.chat.ChatsList',
+        'Melisa.chat.view.phone.chat.ViewChat',
+        'Melisa.chat.view.phone.chat.ContactsList',
+        'Melisa.chat.view.phone.chat.ViewWrapperController'
     ],
     
     mixins: [
         'Melisa.core.Module'
     ],
     
-    layout: 'fit',
-    viewModel: {},
+    controller: 'chatviewwrapper',
+    layout: 'card',
+    cls: 'app-chat-chat-view',
+    viewModel: {
+        data: {
+            chatActive: {}
+        },
+        stores: {
+            contacts: {},
+            chats: {},
+            messages: {}
+        }
+    },
     items: [
         {
             xtype: 'tabpanel',
+            bind: {
+                hidden: '{!conChatView.hidden}'
+            },
             items: [
                 {
-                    xtype: 'appchatuserslist',
-                    title: 'CHATS'
+                    xtype: 'appchatchatslist',
+                    cls: 'chats-list',
+                    title: 'CHATS',
+                    listeners: {
+                        itemtap: 'onItemtapChatsList'
+                    }
                 },
                 {
                     xtype: 'appchatcontactslist',
+                    cls: 'contacts-list',
                     title: 'CONTACTOS'
                 }
+            ]
+        },
+        {
+            xtype: 'chatviewchat',
+            reference: 'conChatView',
+            cls: 'chat',
+            publishes: [
+                'hidden'
             ]
         }
     ]
