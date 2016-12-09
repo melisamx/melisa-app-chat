@@ -28,7 +28,7 @@ Ext.define('Melisa.chat.view.phone.chat.ViewWrapperController', {
         
         var me = this,
             view = me.getView();
-        
+        console.log(record.data);
         me.getViewModel().set('chatActive', record);
         view.setActiveItem(me.lookup('conChatView'));
         

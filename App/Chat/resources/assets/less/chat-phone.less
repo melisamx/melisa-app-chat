@@ -19,7 +19,9 @@
         }
         
         .name,
-        .actual-state {
+        .actual-state,
+        .writing
+        {
             margin-left: 53px;
             text-overflow: ellipsis;
             overflow: hidden;
@@ -37,6 +39,12 @@
             font-weight: bold;
         }
         
+        .writing
+        {
+            color: #4caf50;
+            font-weight: bold;
+        }
+        
         .actual-state
         {
             color: #bdbdbd;
@@ -48,12 +56,28 @@
     .chats-list
     {
         
-        .last-connection
+        .last-connection,
+        .totalUnread
         {
             position: absolute;
             top: 13px;
             color: #bdbdbd;
             right: 10px;
+        }
+        
+        .totalUnread
+        {
+            background-color: #09d261;
+            font-weight: bold;
+            color: #fff;
+            top: 41px;
+            height: 19px;
+            line-height: 19px;
+            min-width: 19px;
+            padding: 0 5px;
+            text-align: center;
+            border-radius: 12px;
+            font-size: 12px;
         }
         
     }
@@ -70,7 +94,8 @@
             }
             
             .name,
-            .lastConnection
+            .lastConnection,
+            .writing
             {
                 font-size: 11px;
                 text-transform: none;
@@ -81,6 +106,7 @@
                 font-weight: bold;
                 font-size: 13px;
             }
+            
         }
         
         .button-close

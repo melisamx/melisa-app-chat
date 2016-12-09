@@ -27,10 +27,14 @@ Ext.define('Melisa.chat.view.phone.chat.ViewChatToolbarTop', {
             tpl: [
                 '<tpl for="data">',
                     '<p class="name">{name}</p>',
-                    '<tpl if="oline">',
-                        '<p class="lastConnection">en línea</p>',
+                    '<tpl if="writing==1">',
+                        '<p class="writing">escribiendo...</p>',
                     '<tpl else>',
-                        '<p class="lastConnection">{[this.pretyDate(values.lastConnection)]}</p>',
+                        '<tpl if="oline">',
+                            '<p class="lastConnection">en línea</p>',
+                        '<tpl else>',
+                            '<p class="lastConnection">{[this.pretyDate(values.lastConnection)]}</p>',
+                        '</tpl>',
                     '</tpl>',
                 '</tpl>',
                 {

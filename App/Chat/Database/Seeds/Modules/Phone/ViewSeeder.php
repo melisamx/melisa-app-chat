@@ -38,6 +38,7 @@ class ViewSeeder extends Seeder
         $this->installAssetCss('asset.chat.phone.chat.view', [
             'name'=>'CSS view chat version phone',
             'path'=>'/chat/css/chat-phone.css',
+            'version'=>'1.0.1',
         ]);
         
     }

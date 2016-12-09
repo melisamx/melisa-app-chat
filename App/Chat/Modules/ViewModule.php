@@ -100,12 +100,39 @@ class ViewModule extends Outbuildings
                                         ]
                                     ]
                                 ],
+                                'writing'=>[
+                                    'type'=>'number',
+                                    'faker'=>[
+                                        'random.arrayElement'=>[
+                                            [
+                                                1,
+                                                0,
+                                            ]
+                                        ]
+                                    ]
+                                ],
+                                'totalUnread'=>[
+                                    'type'=>'number',
+                                    'faker'=>[
+                                        'random.arrayElement'=>[
+                                            [
+                                                0,
+                                                1,
+                                                2,
+                                                4,
+                                                10,
+                                            ]
+                                        ]
+                                    ]
+                                ],
                             ],
                             'required'=>[
                                 'name',
                                 'avatar',
                                 'lastConnection',
-                                'online'
+                                'online',
+                                'writing',
+                                'totalUnread',
                             ]
                         ]
                     ],
@@ -152,7 +179,7 @@ class ViewModule extends Outbuildings
                                 'message',
                                 'dateSend',
                                 'status',
-                                'isIncoming'
+                                'isIncoming',
                             ]
                         ]
                     ]
