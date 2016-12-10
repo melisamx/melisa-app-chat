@@ -55,12 +55,15 @@ Ext.define('Melisa.chat.view.phone.chat.ViewWrapperController', {
             message = Ext.decode(message, true),
             stoMessages = me.createStoreMessages(idIdentityReceiver),
             record = stoMessages.findRecord('id', idMessage);
+    
+        me.log('message recedived', idMessage);
         
-        console.log(record);
         if( record) {
             
             record.set('status', 'server-received');
+            
         }
+        
     },
     
     onIdentitySendMessage: function(message) {
@@ -86,7 +89,7 @@ Ext.define('Melisa.chat.view.phone.chat.ViewWrapperController', {
             stoMessages = model.createStore(nameStore);;
             
         }
-        console.log(model);
+        
         return model.getStore(nameStore);
         
     },
@@ -98,6 +101,13 @@ Ext.define('Melisa.chat.view.phone.chat.ViewWrapperController', {
             contacts = model.getStore('contacts'),
             record = contacts.findRecord('idSocket', idSocketEmisor),
             chatActive = model.get('chatActive');
+    
+        if( typeof record.set === 'undefined') {
+            
+            me.log('no exist idSocket writing', idSocketEmisor);
+            return;
+            
+        }
         
         record.set('writing', true);
         setTimeout(function() {
