@@ -5,9 +5,9 @@ Ext.define('Melisa.chat.view.phone.chat.ViewChatMessages', {
     loadingText: 'Obteniendo mensajes',
     emptyText: 'No hay mensajes',
     deferEmptyText: true,
-    bind: {
-        store: '{messages}'
-    },
+//    bind: {
+//        store: '{messages}'
+//    },
     itemTpl: [
         '<div class="wrapper {[values.isIncoming == 1 ? "incoming": ""]}">',
             '<div class="text">{message}</div>',

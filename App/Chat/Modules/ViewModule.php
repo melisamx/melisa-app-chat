@@ -20,6 +20,9 @@ class ViewModule extends Outbuildings
                 $this->asset('asset.chat.phone.chat.view')
             ],
             'data'=>[
+                'urls'=>[
+                    'realtime'=>'https://developer.melisa.mx:8044/'
+                ],
                 'wrapper'=>[
                     'title'=>'Programaciones'
                 ],
@@ -27,7 +30,8 @@ class ViewModule extends Outbuildings
                 'faker'=>[
                     'contacts'=>[
                         'type'=>'array',
-                        'minItems'=>30,
+                        'minItems'=>0,
+                        'maxItems'=>0,
                         'items'=>[
                             'type'=>'object',
                             'properties'=>[
@@ -63,7 +67,8 @@ class ViewModule extends Outbuildings
                     ],
                     'chats'=>[
                         'type'=>'array',
-                        'minItems'=>30,
+                        'minItems'=>0,
+                        'maxItems'=>0,
                         'items'=>[
                             'type'=>'object',
                             'properties'=>[
@@ -138,7 +143,8 @@ class ViewModule extends Outbuildings
                     ],
                     'messages'=>[
                         'type'=>'array',
-                        'minItems'=>30,
+                        'minItems'=>0,
+                        'maxItems'=>0,
                         'items'=>[
                             'type'=>'object',
                             'properties'=>[

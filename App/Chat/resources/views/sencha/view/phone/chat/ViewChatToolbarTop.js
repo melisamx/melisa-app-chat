@@ -24,6 +24,7 @@ Ext.define('Melisa.chat.view.phone.chat.ViewChatToolbarTop', {
             cls: 'button-contact',
             height: 38,
             flex: 1,
+            reference: 'btnChatContact',
             tpl: [
                 '<tpl for="data">',
                     '<p class="name">{name}</p>',

@@ -45,7 +45,10 @@ Ext.define('Melisa.chat.view.phone.chat.ViewWrapper', {
                 {
                     xtype: 'appchatcontactslist',
                     cls: 'contacts-list',
-                    title: 'CONTACTOS'
+                    title: 'CONTACTOS',
+                    listeners: {
+                        itemtap: 'onItemtapChatsList'
+                    }
                 }
             ]
         },

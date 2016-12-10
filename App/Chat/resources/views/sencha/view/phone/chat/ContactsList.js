@@ -9,7 +9,11 @@ Ext.define('Melisa.chat.view.phone.chat.ContactsList', {
     itemTpl: [
         '<i class="x-fa fa fa-user-circle-o {avatar}" aria-hidden="true"></i>',
         '<p class="name">{name}</p>',
-        '<p class="actual-state">{actualState}</p>'
+        '<tpl if="writing==1">',
+        '<span class="writing">escribiendo...</span>',
+        '<tpl else>',
+        '<p class="actual-state">&nbsp;{actualState}</p>',
+        '</tpl>'
     ],
     bind: {
         store: '{contacts}'

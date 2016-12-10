@@ -17,6 +17,7 @@ Ext.define('Melisa.chat.view.phone.chat.ViewChat', {
         },
         {
             xtype: 'chatviewchatmessages',
+            reference: 'lisMessages',
             cls: 'chat-messages',
             flex: 1
         },
@@ -33,7 +34,10 @@ Ext.define('Melisa.chat.view.phone.chat.ViewChat', {
                     name: 'message',
                     reference: 'txtMessage',
                     placeHolder: 'Escribir mensaje',
-                    flex: 1
+                    flex: 1,
+                    listeners: {
+                        keyup: 'onKeyupTxtMessage'
+                    }
                 },
                 {
                     xtype: 'button',
