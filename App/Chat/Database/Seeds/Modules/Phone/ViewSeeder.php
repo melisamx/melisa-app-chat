@@ -1,12 +1,9 @@
 <?php namespace App\Chat\Database\Seeds\Modules\Phone;
 
-use Illuminate\Database\Seeder;
-use Melisa\Laravel\Database\InstallModule;
-use Melisa\Laravel\Database\InstallAsset;
+use Melisa\Laravel\Database\InstallSeeder;
 
-class ViewSeeder extends Seeder
+class ViewSeeder extends InstallSeeder
 {
-    use InstallModule, InstallAsset;
     
     public function run()
     {

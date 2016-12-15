@@ -1,11 +1,9 @@
 <?php namespace App\Chat\Database\Seeds;
 
-use Illuminate\Database\Seeder;
-use Melisa\Laravel\Database\InstallApplication;
+use Melisa\Laravel\Database\InstallSeeder;
 
-class ApplicationSeeder extends Seeder
-{    
-    use InstallApplication;
+class ApplicationSeeder extends InstallSeeder
+{
     
     public function run()
     {
