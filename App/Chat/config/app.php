@@ -53,6 +53,8 @@ return [
     */
 
     'url' => env('APP_URL', 'http://localhost'),
+    'urlRealtime' => env('APP_URL_REALTIME', 'url.realtime'),
+    'urlLiveReload' => env('APP_URL_LIVERELOAD', 'url.livereload'),
 
     /*
     |--------------------------------------------------------------------------

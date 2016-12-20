@@ -24,7 +24,7 @@ class ViewModule extends Outbuildings
             ],
             'data'=>[
                 'urls'=>[
-                    'realtime'=>'https://developer.melisa.mx:8044/'
+                    'realtime'=>config('app.urlRealtime')
                 ],
                 'wrapper'=>[
                     'title'=>'Melisa Chat'
