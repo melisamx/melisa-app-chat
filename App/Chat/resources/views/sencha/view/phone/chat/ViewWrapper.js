@@ -3,7 +3,7 @@ Ext.define('Melisa.chat.view.phone.chat.ViewWrapper', {
     
     requires: [
         'Melisa.core.Module',
-        
+        'Melisa.chat.view.phone.chat.WrapperTitle',
         'Melisa.chat.view.phone.chat.ChatsList',
         'Melisa.chat.view.phone.chat.ViewChat',
         'Melisa.chat.view.phone.chat.ContactsList',
@@ -28,6 +28,9 @@ Ext.define('Melisa.chat.view.phone.chat.ViewWrapper', {
         }
     },
     items: [
+        {
+            xtype: 'chatwrappertitle'
+        },
         {
             xtype: 'tabpanel',
             bind: {

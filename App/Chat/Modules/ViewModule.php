@@ -17,14 +17,17 @@ class ViewModule extends Outbuildings
         return [
             'success'=>true,
             'assets'=>[
-                $this->asset('asset.chat.phone.chat.view')
+                $this->asset('asset.chat.phone.chat.view'),
+                $this->asset('momentjs'),
+                $this->asset('momentjs.locales'),
+                $this->asset('momentjs.precise.range'),
             ],
             'data'=>[
                 'urls'=>[
                     'realtime'=>'https://developer.melisa.mx:8044/'
                 ],
                 'wrapper'=>[
-                    'title'=>'Programaciones'
+                    'title'=>'Melisa Chat'
                 ],
                 'i18n'=>[],
                 'faker'=>[
