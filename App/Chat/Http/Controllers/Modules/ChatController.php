@@ -3,6 +3,11 @@
 use Melisa\Laravel\Http\Controllers\Controller;
 use App\Chat\Modules\ViewModule;
 
+/**
+ * 
+ *
+ * @author Luis Josafat Heredia Contreras
+ */
 class ChatController extends Controller
 {
     

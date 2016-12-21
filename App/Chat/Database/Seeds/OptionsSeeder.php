@@ -2,6 +2,11 @@
 
 use Melisa\Laravel\Database\InstallSeeder;
 
+/**
+ * 
+ *
+ * @author Luis Josafat Heredia Contreras
+ */
 class OptionsSeeder extends InstallSeeder
 {
     
