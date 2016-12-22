@@ -1,13 +1,13 @@
-Ext.define('Melisa.chat.view.phone.chat.ViewWrapper', {
+Ext.define('Melisa.chat.view.phone.chat.view.Wrapper', {
     extend: 'Melisa.panel.ux.Wrapper',
     
     requires: [
         'Melisa.core.Module',
-        'Melisa.chat.view.phone.chat.WrapperTitle',
-        'Melisa.chat.view.phone.chat.ChatsList',
-        'Melisa.chat.view.phone.chat.ViewChat',
-        'Melisa.chat.view.phone.chat.ContactsList',
-        'Melisa.chat.view.phone.chat.ViewWrapperController'
+        'Melisa.chat.view.phone.chat.view.WrapperTitle',
+        'Melisa.chat.view.phone.chat.view.ChatsList',
+        'Melisa.chat.view.phone.chat.view.Chat',
+        'Melisa.chat.view.phone.chat.view.ContactsList',
+        'Melisa.chat.view.phone.chat.view.WrapperController'
     ],
     
     mixins: [
@@ -38,7 +38,7 @@ Ext.define('Melisa.chat.view.phone.chat.ViewWrapper', {
             },
             items: [
                 {
-                    xtype: 'appchatchatslist',
+                    xtype: 'chatchatslist',
                     cls: 'chats-list',
                     title: 'CHATS',
                     listeners: {
@@ -46,7 +46,7 @@ Ext.define('Melisa.chat.view.phone.chat.ViewWrapper', {
                     }
                 },
                 {
-                    xtype: 'appchatcontactslist',
+                    xtype: 'chatcontactslist',
                     cls: 'contacts-list',
                     title: 'CONTACTOS',
                     listeners: {

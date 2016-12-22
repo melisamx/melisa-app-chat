@@ -1,4 +1,4 @@
-Ext.define('Melisa.chat.view.phone.chat.WrapperTitle', {
+Ext.define('Melisa.chat.view.phone.chat.view.WrapperTitle', {
     extend: 'Ext.TitleBar',
     alias: 'widget.chatwrappertitle',
     

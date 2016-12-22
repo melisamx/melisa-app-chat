@@ -1,10 +1,10 @@
-Ext.define('Melisa.chat.view.phone.chat.ViewChat', {
+Ext.define('Melisa.chat.view.phone.chat.view.Chat', {
     extend: 'Ext.Container',
     alias: 'widget.chatviewchat',
     
     requires: [
-        'Melisa.chat.view.phone.chat.ViewChatToolbarTop',
-        'Melisa.chat.view.phone.chat.ViewChatMessages'
+        'Melisa.chat.view.phone.chat.view.ChatToolbarTop',
+        'Melisa.chat.view.phone.chat.view.ChatMessages'
     ],
     
     layout: {

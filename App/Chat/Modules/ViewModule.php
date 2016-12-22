@@ -27,7 +27,7 @@ class ViewModule extends Outbuildings
                     'realtime'=>config('app.urlRealtime')
                 ],
                 'wrapper'=>[
-                    'title'=>'Melisa Chat'
+                    'title'=>config('app.name')
                 ],
                 'i18n'=>[],
                 'faker'=>[

@@ -1,11 +1,14 @@
-Ext.define('Melisa.chat.view.phone.chat.ChatsList', {
+Ext.define('Melisa.chat.view.phone.chat.view.ChatsList', {
     extend: 'Ext.List',
-    alias: 'widget.appchatchatslist',
+    alias: 'widget.chatchatslist',
     
     loadingText: 'Obteniendo lista de chats',
     emptyText: 'No hay chats',
     deferEmptyText: true,
     striped: true,
+    bind: {
+        store: '{chats}'
+    },
     itemTpl: [
         '<i class="x-fa fa fa-user-circle-o {avatar}"></i>',
         '<p class="name">{name}</p>',
@@ -42,8 +45,5 @@ Ext.define('Melisa.chat.view.phone.chat.ChatsList', {
             }
             
         }
-    ],
-    bind: {
-        store: '{chats}'
-    }
+    ]
 });

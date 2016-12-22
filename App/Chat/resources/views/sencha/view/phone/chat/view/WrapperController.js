@@ -1,4 +1,4 @@
-Ext.define('Melisa.chat.view.phone.chat.ViewWrapperController', {
+Ext.define('Melisa.chat.view.phone.chat.view.WrapperController', {
     extend: 'Melisa.core.ViewController',    
     alias: 'controller.chatviewwrapper',
     
@@ -282,7 +282,7 @@ Ext.define('Melisa.chat.view.phone.chat.ViewWrapperController', {
         
         var me = this,
             socket = me.getSocket();
-        
+        console.log(arguments);
         socket.emit('login', Ext.manifest.melisa.identity);
         
     },

@@ -18,7 +18,7 @@ class ViewSeeder extends InstallSeeder
                 'name'=>'Ver Chat',
                 'url'=>'/chat.php/modules/chat/viewPhone',
                 'description'=>'Módulo interfaz de usuario para ver chat versión phone',
-                'nameSpace'=>'Melisa.chat.view.phone.chat.ViewWrapper',
+                'nameSpace'=>'Melisa.chat.view.phone.chat.view.Wrapper',
                 'task'=>[
                     'key'=>'task.chat.chat.view.access',
                     'name'=>'Acceso a ver chat versión phone',

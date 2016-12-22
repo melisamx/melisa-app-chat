@@ -1,4 +1,4 @@
-Ext.define('Melisa.chat.view.phone.chat.ViewChatMessages', {
+Ext.define('Melisa.chat.view.phone.chat.view.ChatMessages', {
     extend: 'Ext.List',
     alias: 'widget.chatviewchatmessages',
     
