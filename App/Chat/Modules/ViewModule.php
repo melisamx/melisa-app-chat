@@ -24,7 +24,7 @@ class ViewModule extends Outbuildings
             ],
             'data'=>[
                 'urls'=>[
-                    'realtime'=>config('app.urlRealtime')
+                    'realtime'=>config('realtime.url') . 'chat'
                 ],
                 'wrapper'=>[
                     'title'=>config('app.name')

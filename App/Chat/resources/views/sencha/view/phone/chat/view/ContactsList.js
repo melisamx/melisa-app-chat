@@ -16,6 +16,7 @@ Ext.define('Melisa.chat.view.phone.chat.view.ContactsList', {
         '<span class="writing">escribiendo...</span>',
         '<tpl else>',
         '<p class="actual-state">&nbsp;{actualState}</p>',
-        '</tpl>'
+        '</tpl>',
+        '<span class="{[ values.online ? "online" : "offline"]}"></span>'
     ]
 });
