@@ -13,7 +13,7 @@ class ModulesPhoneSeeder extends Seeder
     public function run()
     {
         
-        $this->call(Phone\ViewSeeder::class);
+        $this->call(Phone\Chat\ViewSeeder::class);
         
     }
     

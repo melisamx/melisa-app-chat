@@ -3,7 +3,6 @@ Ext.define('Melisa.chat.view.phone.chat.view.WrapperController', {
     alias: 'controller.chatviewwrapper',
     
     requires: [
-        'Melisa.util.faker.Faker',
         'Melisa.ux.Socket'
     ],
     
@@ -19,10 +18,6 @@ Ext.define('Melisa.chat.view.phone.chat.view.WrapperController', {
             client = Ext.create('Melisa.ux.Socket'),
             socket;
         
-        model.getStore('contacts').setData(jsf(model.get('faker.contacts')));
-        model.getStore('chats').setData(jsf(model.get('faker.chats')));
-        model.getStore('messages').setData(jsf(model.get('faker.messages')));
-        
         moment.locale('es');
         moment.defineLocale('es', {
             relativeTime : {
@@ -30,10 +25,8 @@ Ext.define('Melisa.chat.view.phone.chat.view.WrapperController', {
             }
         });
         
-        if( !client.connect(model.get('urls.realtime'))) {
-            
-            return false;
-            
+        if( !client.connect(model.get('urls.realtime'))) {            
+            return false;            
         }
         
         me.setSocket(socket = client.getSocket());
@@ -58,10 +51,8 @@ Ext.define('Melisa.chat.view.phone.chat.view.WrapperController', {
     
         me.log('message received', idMessage);
         
-        if( record) {
-            
-            record.set('status', 'server-received');
-            
+        if( record) {            
+            record.set('status', 'server-received');            
         }
         
     },
@@ -84,10 +75,8 @@ Ext.define('Melisa.chat.view.phone.chat.view.WrapperController', {
             nameStore = 'messages-' + id,
             stoMessages = model.getStore(nameStore);
     
-        if( stoMessages === null) {
-            
-            stoMessages = model.createStore(nameStore);;
-            
+        if( stoMessages === null) {            
+            stoMessages = model.createStore(nameStore);            
         }
         
         return model.getStore(nameStore);
@@ -104,18 +93,14 @@ Ext.define('Melisa.chat.view.phone.chat.view.WrapperController', {
     
         me.log('identity writing', idSocketEmisor);
         
-        if( !record) {
-            
+        if( !record) {            
             me.log('identity no exist in list chat ignore event');
-            return;
-            
+            return;            
         }
         
-        if( typeof record.set === 'undefined') {
-            
+        if( typeof record.set === 'undefined') {            
             me.log('no exist idSocket writing', idSocketEmisor);
-            return;
-            
+            return;            
         }
         
         record.set('writing', true);
@@ -123,14 +108,11 @@ Ext.define('Melisa.chat.view.phone.chat.view.WrapperController', {
             record.set('writing', false);
         }, 5000);
         
-        if( typeof chatActive.get === 'undefined') {
-            
-            return;
-            
+        if( typeof chatActive.get === 'undefined') {            
+            return;            
         }
 
-        if( chatActive.get('idSocket') === idSocketEmisor) {
-                
+        if( chatActive.get('idSocket') === idSocketEmisor) {               
             
             chatActive.set('writing', true);
             /* necesary no bind changes */
@@ -164,10 +146,8 @@ Ext.define('Melisa.chat.view.phone.chat.view.WrapperController', {
                 online: true
             });
             
-            if( typeof chatActive.get === 'undefined') {
-            
+            if( typeof chatActive.get === 'undefined') {            
                 return;
-
             }
             
             if( chatActive.get('id') === identity.id) {
@@ -206,16 +186,12 @@ Ext.define('Melisa.chat.view.phone.chat.view.WrapperController', {
         
         if(e.getCharCode() !== 13) {
             
-            if( !chatActive.data.idSocket || Ext.isEmpty(message)) {
-                
-                return;
-                
+            if( !chatActive.data.idSocket || Ext.isEmpty(message)) {                
+                return;                
             }
             
-            if( socket.nsp !== '/') {
-                
-                idSocket = socket.nsp + '#' + idSocket;
-                
+            if( socket.nsp !== '/') {                
+                idSocket = socket.nsp + '#' + idSocket;                
             }
             
             me.getSocket().emit('identity writing', chatActive.get('idSocket'), idSocket);
@@ -248,18 +224,14 @@ Ext.define('Melisa.chat.view.phone.chat.view.WrapperController', {
         
         me.log('socket disconnect', idSocket);
         
-        if( !record) {
-            
-            return;
-            
+        if( !record) {            
+            return;            
         }
         
         record.set('online', false);
         
-        if( typeof chatActive.get === 'undefined') {
-            
+        if( typeof chatActive.get === 'undefined') {            
             return;
-
         }
         
         if( chatActive.get('idSocket') === idSocket) {

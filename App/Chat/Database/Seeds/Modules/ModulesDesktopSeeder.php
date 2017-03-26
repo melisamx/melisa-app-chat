@@ -13,7 +13,7 @@ class ModulesDesktopSeeder extends Seeder
     public function run()
     {
         
-        
+        $this->call(Desktop\Chat\ViewSeeder::class);
         
     }
     

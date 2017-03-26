@@ -17,7 +17,8 @@ class ApplicationSeeder extends InstallSeeder
             'name'=>'Chat',
             'description'=>'Application Chat',
             'nameSpace'=>'Melisa.chat',
-            'typeSecurity'=>'art'
+            'typeSecurity'=>'art',
+            'version'=>'1.0.0'
         ]);
         
     }

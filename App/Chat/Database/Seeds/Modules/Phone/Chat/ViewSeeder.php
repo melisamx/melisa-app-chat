@@ -1,4 +1,4 @@
-<?php namespace App\Chat\Database\Seeds\Modules\Phone;
+<?php namespace App\Chat\Database\Seeds\Modules\Phone\Chat;
 
 use Melisa\Laravel\Database\InstallSeeder;
 
@@ -20,7 +20,7 @@ class ViewSeeder extends InstallSeeder
                 'description'=>'Módulo interfaz de usuario para ver chat versión phone',
                 'nameSpace'=>'Melisa.chat.view.phone.chat.view.Wrapper',
                 'task'=>[
-                    'key'=>'task.chat.chat.view.access',
+                    'key'=>'task.chat.phone.chat.view.access',
                     'name'=>'Acceso a ver chat versión phone',
                     'description'=>'Permitir acceso a ver chat en versión phone',
                     'pattern'=>'access'
@@ -31,7 +31,7 @@ class ViewSeeder extends InstallSeeder
                     'text'=>'Chat'
                 ],
                 'event'=>[
-                    'key'=>'event.chat.chat.view.access',
+                    'key'=>'event.chat.phone.chat.view.access',
                     'description'=>'Acceso al módulo para ver chat versión phone'
                 ],
             ],

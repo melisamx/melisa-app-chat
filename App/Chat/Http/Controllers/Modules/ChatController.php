@@ -12,10 +12,13 @@ class ChatController extends Controller
 {
     
     public function viewPhone(ViewModule $module)
-    {
-        
-        return $module->render();
-        
+    {        
+        return $module->render();        
+    }
+    
+    public function view(ViewModule $module)
+    {        
+        return $module->render();        
     }
     
 }
