@@ -10,7 +10,7 @@ use App\Core\Logics\Modules\Outbuildings;
 class ViewModule extends Outbuildings
 {
     
-    public $event = 'event.chat.chat.view.access';
+    public $event = 'chat.chat.view.access';
 
     public function dataDictionary() {
         
